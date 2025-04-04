@@ -616,11 +616,14 @@
                     imageHTML = `<img src="${item.imageURL}" class="thumbnail-img" onclick="openModal('${item.imageURL}')">`;
                 } 
 
+                const formattedDate = new Date(item.timestamp).toLocaleDateString();
+
                 let itemHTML = `
                     <div class='info'>
                         <div><strong>Category:</strong> ${item.category || "Unspecified"}</div>
                         <div><strong>Location:</strong> ${item.location || "Unspecified"}</div>
                         <div><strong>Note:</strong> ${item.note || "No note provided"}</div>
+                        <div><strong>Date:</strong> ${formattedDate}</div>
                     </div>
                 `;
 
